@@ -1,0 +1,191 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-21 16:21:46 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/brianboyd/.rvm/gems/ruby-2.1.1@global/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 26ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateInvoices (20140521202918)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "invoices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "company" varchar(255), "tax" decimal, "salesperson" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140521202918"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-21 16:33:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/brianboyd/.rvm/gems/ruby-2.1.1@global/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 27ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2014-05-21 16:33:20 -0400
+Processing by InvoicesController#index as HTML
+  [1m[35mInvoice Load (0.3ms)[0m  SELECT "invoices".* FROM "invoices"
+  Rendered invoices/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 728ms (Views: 725.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/invoices.css?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:21 -0400
+
+
+Started GET "/invoices/new" for 127.0.0.1 at 2014-05-21 16:33:23 -0400
+Processing by InvoicesController#new as HTML
+  Rendered invoices/_form.html.erb (41.7ms)
+  Rendered invoices/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+Processing by InvoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8La1xLiwXk9DrjKlcPyG0eG9X1X4wkAxK5EQhwKSUU=", "invoice"=>{"date(1i)"=>"2014", "date(2i)"=>"5", "date(3i)"=>"21", "date(4i)"=>"20", "date(5i)"=>"33", "company"=>"ABC Company", "tax"=>"7.5", "salesperson"=>"Jones"}, "commit"=>"Create Invoice"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "invoices" ("company", "created_at", "date", "salesperson", "tax", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["company", "ABC Company"], ["created_at", "2014-05-21 20:33:51.577389"], ["date", "2014-05-21 20:33:00.000000"], ["salesperson", "Jones"], ["tax", 7.5], ["updated_at", "2014-05-21 20:33:51.577389"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/invoices/1
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+Processing by InvoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mInvoice Load (0.3ms)[0m  SELECT  "invoices".* FROM "invoices"  WHERE "invoices"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered invoices/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/invoices.css?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 16:33:51 -0400
+
+
+Started GET "/invoices/1/edit" for 127.0.0.1 at 2014-05-21 16:34:09 -0400
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvoice Load (0.1ms)[0m  [1mSELECT  "invoices".* FROM "invoices"  WHERE "invoices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered invoices/_form.html.erb (7.9ms)
+  Rendered invoices/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2014-05-21 16:34:12 -0400
+Processing by InvoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mInvoice Load (0.1ms)[0m  SELECT  "invoices".* FROM "invoices"  WHERE "invoices"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered invoices/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2014-05-21 16:34:14 -0400
+Processing by InvoicesController#index as HTML
+  [1m[36mInvoice Load (0.3ms)[0m  [1mSELECT "invoices".* FROM "invoices"[0m
+  Rendered invoices/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2014-05-21 16:34:17 -0400
+Processing by InvoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mInvoice Load (0.1ms)[0m  SELECT  "invoices".* FROM "invoices"  WHERE "invoices"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered invoices/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/invoices/new" for 127.0.0.1 at 2014-05-21 16:34:29 -0400
+Processing by InvoicesController#new as HTML
+  Rendered invoices/_form.html.erb (17.4ms)
+  Rendered invoices/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+Processing by InvoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8La1xLiwXk9DrjKlcPyG0eG9X1X4wkAxK5EQhwKSUU=", "invoice"=>{"date(1i)"=>"2014", "date(2i)"=>"5", "date(3i)"=>"21", "date(4i)"=>"21", "date(5i)"=>"34", "company"=>"ABC Plumbing", "tax"=>"5", "salesperson"=>"Smith"}, "commit"=>"Create Invoice"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "invoices" ("company", "created_at", "date", "salesperson", "tax", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["company", "ABC Plumbing"], ["created_at", "2014-05-21 20:34:57.053897"], ["date", "2014-05-21 21:34:00.000000"], ["salesperson", "Smith"], ["tax", 5.0], ["updated_at", "2014-05-21 20:34:57.053897"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/invoices/2
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/invoices/2" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+Processing by InvoicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mInvoice Load (0.1ms)[0m  SELECT  "invoices".* FROM "invoices"  WHERE "invoices"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered invoices/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/invoices.css?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2014-05-21 16:34:57 -0400
+
+
+Started GET "/invoices" for 127.0.0.1 at 2014-05-21 16:34:59 -0400
+Processing by InvoicesController#index as HTML
+  [1m[36mInvoice Load (0.2ms)[0m  [1mSELECT "invoices".* FROM "invoices"[0m
+  Rendered invoices/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
