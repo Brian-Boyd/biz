@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'devise'
+# gem 'letter_opener'
 
 ruby '2.1.1'
 gem 'rails_12factor', group: :production
