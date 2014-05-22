@@ -588,3 +588,65 @@ Processing by InvoicesController#index as HTML
   [1m[35mInvoice Load (0.4ms)[0m  SELECT "invoices".* FROM "invoices"
   Rendered invoices/index.html.erb within layouts/application (10.7ms)
 Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2014-05-22 10:06:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InvoicesController#index as HTML
+  [1m[35mInvoice Load (0.2ms)[0m  SELECT "invoices".* FROM "invoices"
+  Rendered invoices/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 1719ms (Views: 1704.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-22 10:06:29 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-22 10:06:44 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-22 10:10:19 -0400
