@@ -28,6 +28,12 @@
       <%= f.label :salesperson, class: 'control-label' %><br>
       <%= f.text_field :salesperson %>
     </div>
+    <div class="control-group">
+      <%= f.label "Status", class: 'control-label' %>
+      <div class="controls">
+        <%= f.select(:status_type, options_for_select([['PAID', 'PAID'], ['PENDING', 'PENDING']]), { include_blank: '--- Select ---' }) %>
+      </div>
+    </div>
     <div class="actions">
         <%= f.submit 'Submit', class: 'btn btn-default' %>
     </div>
