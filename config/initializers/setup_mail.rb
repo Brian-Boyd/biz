@@ -1,4 +1,5 @@
 ActionMailer::Base.delivery_method = :smtp
+config.action_mailer.default_url_options = { :host => 'cubicalwebbiz.herokuapp.com/' }
 ActionMailer::Base.smtp_settings = {
   :address              =>  'smtp.sendgrid.net',
   :port                 =>  '587',
